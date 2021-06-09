@@ -2,6 +2,8 @@
 
 - [문제 링크](https://leetcode.com/problems/range-sum-of-bst/)
 
+<br>
+
 ## 내 풀이
 
 - 실행 시간: 204 ms
@@ -26,6 +28,8 @@ class Solution:
         return self.sum_value
 ```
 
+<br>
+
 ## 풀이 1
 
 - 실행 시간: 496 ms
@@ -39,11 +43,13 @@ class Solution:
         return (root.val if low <= root.val <= high else 0) + self.rangeSumBST(root.left, low, high) + self.rangeSumBST(root.right, low, high)
 ```
 
+<br>
+
 ## 풀이 2
 
 - 실행 시간: 432 ms
 - 내 풀이와 비슷하지만 더 깔끔하게 짰다.
-    - 클래스 변수도 사용하지 않았고 dfs 내부함수만을 통해 해결
+  - 클래스 변수도 사용하지 않았고 dfs 내부함수만을 통해 해결
 
 ```python
 class Solution:
@@ -62,11 +68,13 @@ class Solution:
         return dfs(root)
 ```
 
+<br>
+
 ## 풀이 3
 
 - 실행 시간: 208ms
 - stack을 활용한 반복문 풀이(동일한 방식으로 큐를 사용해 BFS를 해도 똑같다)
-    - 처음에는 조건문을 보고 이상하다고 생각했지만 유망한 노드들을 stack에 넣어준다는 것을 알게 되었다.
+  - 처음에는 조건문을 보고 이상하다고 생각했지만 유망한 노드들을 stack에 넣어준다는 것을 알게 되었다.
 
 ```python
 class Solution:
