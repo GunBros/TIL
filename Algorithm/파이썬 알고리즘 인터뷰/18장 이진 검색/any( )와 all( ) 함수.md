@@ -9,7 +9,7 @@ any( ) 함수는 포함된 값 중 어느 하나가 참이라면 항상 참으�
 ```python
 print(any([True, False, False]))
 # True
-print(True or False or False)
+print(True or False or False)   
 # True
 ```
 
